@@ -1,7 +1,6 @@
 class CreateRelationships < ActiveRecord::Migration
   def change
     create_table :relationships do |t|
-    	t.integer :id
     	t.integer :follower_id
     	t.integer :following_id
     	t.integer :activity_id
