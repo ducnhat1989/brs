@@ -1,0 +1,21 @@
+<% provide(:title, 'List Books Reading') %>
+<h1>List Books Reading</h1>
+
+
+<table class="table" cellpadding="2" cellspacing="0" width="100%">
+  <tr>
+		<td class="listbox-header" align="center">
+			Title
+		</td>
+		<td class="listbox-header" align="center">Author</td>
+		<td class="listbox-header" align="center">Publish at</td>
+		<td class="listbox-header" align="center">Price</td>
+		<td class="listbox-header" align="center">Category</td>
+		<td class="listbox-header" align="center">Reading Date</td>
+	</tr>
+	<% if @books_readings.nil? %>
+	<%= render @readings %>
+	<%= will_paginate %>
+	<% end %>
+</table>
+

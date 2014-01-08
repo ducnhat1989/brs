@@ -1,0 +1,20 @@
+<tr>
+		<td class="listbox-entry">
+			<%= link_to reading.book.title, reading.book %>
+		</td>
+		<td class="listbox-entry" align="center">
+		  <%= reading.book.author %>
+		</td>
+		<td class="listbox-entry" align="center">
+		  <%= reading.book.publish_date.strftime("%Y-%m-%d") %>
+		</td>
+		<td class="listbox-header" align="center">
+		  <%= reading.book.price %>
+		</td>
+		<td class="listbox-header" align="center">
+		  <%= reading.book.category.name %>
+		</td>
+		<td class="listbox-header" align="center">
+		  <%= reading.created_at.strftime("%Y-%m-%d") %>
+		</td>
+</tr>
