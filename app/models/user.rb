@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   has_many :reads
   has_many :favourites
   has_many :rates
+  has_many :activities
+  has_many :likes
 
   before_save { self.email = email.downcase }
   before_create :create_remember_token

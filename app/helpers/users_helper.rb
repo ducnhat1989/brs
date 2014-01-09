@@ -7,4 +7,9 @@ module UsersHelper
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
     image_tag(gravatar_url, alt: user.username, class: "gravatar")
   end
+
+  def user_activiting? user
+    user.activities.any? || user.readings.any?
+    user.rates.any? || user.likes.any?
+  end
 end
