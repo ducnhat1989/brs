@@ -10,6 +10,9 @@
     <section>
       <%= render 'shared/stats' %>
     </section>
+    <section>
+      <%= link_to 'List Favourite', user_favourites_path(@user)  %>
+    </section>
   </aside>
   <div class="span8">
     <%= render 'follow_form' if signed_in? %>

@@ -1,0 +1,19 @@
+<% provide(:title, 'Favorite book list') %>
+<h1>Favorite book list</h1>
+
+
+<table cellpadding="2" cellspacing="0" width="100%">
+  <tr>
+		<td class="listbox-header" align="center">
+			Title
+		</td>
+		<td class="listbox-header" align="center">Author</td>
+		<td class="listbox-header" align="center">Publish at</td>
+		<td class="listbox-header" align="center">Price</td>
+		<td class="listbox-header" align="center">Category</td>
+	</tr>
+
+	<%= render @favourites %>
+</table>
+
+<%= will_paginate %>

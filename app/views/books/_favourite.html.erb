@@ -1,8 +1,5 @@
 <li>
-<%= form_for(Favourite.new(user_id: current_user.id, 
-	           book_id: book.id), remote: true) do |f| %>
-  <%= f.hidden_field :user_id %>
-  <%= f.hidden_field :book_id %>
+<%= form_for([@book, @favourite], remote: true) do |f| %>
   <%= f.submit "Mask as Favourite", class: "btn btn-small btn-primary" %>
 <% end %>
 </li>

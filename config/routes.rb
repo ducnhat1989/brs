@@ -11,16 +11,18 @@ Brs::Application.routes.draw do
 
   resources :books do
     resources :rates, only: [:create, :destroy, :update, :edit]
+    resources :favourites, only: [:create]
   end
 
   resources :users do
+    resources :favourites, only: [:index]
     member do
       get :following, :followers
     end
   end
   resources :readings, only: [:index, :create]
   resources :reads, only: [:create]
-  resources :favourites, only: [:index, :create]
+
   resources :searchs
 
   namespace :admin do

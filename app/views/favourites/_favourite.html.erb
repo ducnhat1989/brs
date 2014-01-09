@@ -1,0 +1,20 @@
+<tr>
+		<td class="listbox-entry">
+			<%= link_to favourite.book.title, favourite.book %>
+		</td>
+		<td class="listbox-entry" align="center">
+		  <%= favourite.book.author %>
+		</td>
+		<td class="listbox-entry" align="center">
+		  <%= favourite.book.publish_date.strftime("%Y-%m-%d") %>
+		</td>
+		<td class="listbox-header" align="center">
+		  <%= favourite.book.price %>
+		</td>
+		<td class="listbox-header" align="center">
+		  <%= favourite.book.category.name %>
+		</td>
+		<td class="listbox-header" align="center">
+		  <%= favourite.created_at.strftime("%Y-%m-%d") %>
+		</td>
+</tr>

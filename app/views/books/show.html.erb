@@ -6,7 +6,8 @@
     <li>has <%= @book.num_page %> divages</li>
     <li>Price: <%= @book.price %></li>
     <li>Category: <%= @book.category.name %></li>
-    <%= render 'favourite_form', book: @book if signed_in? %>
+    <% @favourite = @book.favourites.build() %>
+    <%= render 'favourite_form' if signed_in? %>
     <%= render 'read_form', book: @book if signed_in? %>
     <%= render 'reading_form', book: @book if signed_in? %>
     <% if @rate.nil? %>
